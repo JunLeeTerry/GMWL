@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<matrixlport>
+    <port name="输入1" id="51" type="output" position="1" >
+        <content1>
+            43,52,45,41,54,49,56,45,00,7b,02,e2,04,dd,00,7b,01,ce,00,5c,53,44
+        </content1>
+        <content2>
+            43,52,45,41,54,49,56,45,0e,49,0a,52,1a,1b,00,31,00,ac,00,32,52,53
+        </content2>
+    </port>
+    <port name="输入2" id="52" type="output" position="2" >
+         <content1>
+            43,52,45,41,54,49,56,45,0f,1b,0e,b1,1f,4c,00,63,01,6e,00,51,53,44
+        </content1>
+        <content2>
+            43,52,45,41,54,49,56,45,0d,f6,0b,76,1a,ec,00,3e,00,e9,00,32,52,53
+        </content2>
+    </port>
+    <port name="输入3" id="53" type="output" position="3" >
+         <content1>
+            43,52,45,41,54,49,56,45,0b,6c,02,13,0e,ff,00,14,00,2f,00,2d,53,44
+	     </content1>
+        <content2>
+            43,52,45,41,54,49,56,45,0d,af,02,68,11,97,00,3f,00,d2,00,4a,52,53
+        </content2>
+    </port>
+    <port name="输入4" id="54" type="output" position="4" >
+         <content1>
+            43,52,45,41,54,49,56,45,04,fa,06,40,0c,ba,00,2a,00,8d,00,34,53,44
+        </content1>
+        <content2>
+            43,52,45,41,54,49,56,45,0b,2d,09,76,16,23,00,45,00,f0,00,49,52,53
+	      </content2>
+    </port>
+     
+    <port name="输入5" id="55" type="output" position="5" >
+         <content1>
+            43,52,45,41,54,49,56,45,03,43,04,05,08,c8,00,03,00,06,00,10,53,44
+        </content1>
+        <content2>
+            43,52,45,41,54,49,56,45,07,9f,06,39,0f,58,00,27,00,72,00,40,52,53
+        </content2>
+    </port>        
+        
+    <port name="输入6" id="56" type="output" position="6" >
+         <content1>
+            43,52,45,41,54,49,56,45,04,86,05,4e,0b,54,00,26,00,89,00,2a,53,44
+        </content1>
+        <content2>
+            43,52,45,41,54,49,56,45,05,2e,04,4e,0a,fc,00,2e,00,91,00,42,52,53
+       </content2>
+    </port>
+    <port name="输出1" id="57" type="input" position="1" >
+         <content1>
+            43,52,45,41,54,49,56,45,0a,7c,0e,39,1a,35,00,24,00,6f,00,39,53,44
+        </content1>
+        <content2>
+            43,52,45,41,54,49,56,45,0d,c2,08,30,17,72,00,1a,00,65,00,1b,52,53
+        </content2>
+    </port>
+    <port name="输出2" id="58" type="input" position="2" >
+         <content1>
+            43,52,45,41,54,49,56,45,08,9e,01,1d,0b,3b,00,16,00,31,00,38,53,44
+        </content1>
+        <content2>
+            43,52,45,41,54,49,56,45,0d,99,0d,cf,1c,e8,00,69,01,8c,00,55,52,53
+        </content2>
+    </port>
+    <port name="输出3" id="59" type="input" position="3" >
+         <content1>
+            43,52,45,41,54,49,56,45,00,63,01,7b,03,5e,00,3b,00,e6,00,30,53,44
+        </content1>
+        <content2>
+            43,52,45,41,54,49,56,45,0c,fe,09,2d,17,ab,00,1e,00,51,00,3d,52,53
+        </content2>
+    </port>
+    <port name="输出4" id="60" type="input" position="4" >
+         <content1>
+            43,52,45,41,54,49,56,45,04,c7,0a,21,10,68,00,17,00,4a,00,29,53,44
+        </content1>
+        <content2>
+            43,52,45,41,54,49,56,45,08,2b,0b,84,15,2f,00,4b,01,0e,00,4d,52,53
+        </content2>
+    </port>
+    <port name="输出5" id="61" type="input" position="5" >
+         <content1>
+            43,52,45,41,54,49,56,45,03,17,06,9f,0b,36,00,4f,01,2a,00,46,53,44
+       </content1>
+        <content2>
+            43,52,45,41,54,49,56,45,05,7d,0c,65,13,62,00,3d,00,d0,00,4c,52,53
+        </content2>
+    </port>
+    <port name="输出6" id="62" type="input" position="6" >
+         <content1>
+            43,52,45,41,54,49,56,45,0f,b6,08,19,19,4f,00,0e,00,29,00,24,53,44
+        </content1>
+        <content2>
+            43,52,45,41,54,49,56,45,0c,e9,07,09,15,72,00,09,00,0c,00,29,52,53
+        </content2>
+    </port>
+    
+</matrixlport>

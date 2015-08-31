@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mixcellanous>
+    <matrix name="矩阵" ip="192.168.18.20" port="12345"></matrix>
+    <defaulturl>http://192.168.18.145/index.html?id=default</defaulturl>
+</mixcellanous>

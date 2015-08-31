@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<splits>
+    <split id="1" name="二分屏" value="2" >
+    </split>
+    <split id="2" name="三分屏" value="3">
+    </split>
+    <split id="3" name="四分屏" value="4" >
+    </split>
+     <split id="4" name="八分屏" value="8" >
+      
+    </split>
+      
+</splits>

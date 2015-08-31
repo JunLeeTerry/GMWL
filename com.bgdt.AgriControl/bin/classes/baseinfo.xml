@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infos>
+    <info id="1" name="相城信息中心">
+        <detail id="1">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=1</data>
+            <name>相城现代农业一区</name>
+        </detail>
+        <detail id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=2</data>
+            <name>相城现代农业二区</name>
+        </detail>
+        <detail id="3">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>相城现代农业三区</name>
+        </detail>
+        <detail id="4">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=4</data>
+            <name>相城现代农业四区</name>
+        </detail>
+         <detail id="5">
+           <type>Web</type>
+            <url>http://192.168.18.145/index.html?id=5</url>
+            <data>http://192.168.18.145/index.html?id=2</data>
+            <name>相城区质量追溯</name>
+        </detail>
+        <detail id="6">
+            <type>Web</type>
+            <url>http://192.168.18.145/index.html?id=6</url>
+            <data>http://192.168.18.164/index.html?id=5</data>
+            <name>相城屠宰追溯</name>
+        </detail>
+        <detail id="7">
+           <type>Web</type>
+            <url>http://192.168.18.145/index.html?id=7</url>
+            <data>http://192.168.18.164/index.html?id=6</data>
+            <name>相城特色产品</name>
+        </detail>
+        <detail id="8">
+            <type>Web</type>
+            <url>http://192.168.18.145/index.html?id=8</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>相城生态旅游</name>
+        </detail>
+        <detail id="9">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc5.html</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>相城龙头企业</name>
+        </detail>
+        <detail id="10">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc6.html</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>相城产品供需</name>
+        </detail>
+         <detail id="11">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>相城现代农业11区</name>
+        </detail>
+    </info>
+    <info id="2" name="昆山信息中心">
+        <detail id="1">
+            <type>Video</type>
+            <url>rtsp://192.168.18.20:8554/</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>昆山现代农业一区</name>
+        </detail>
+        <detail id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.20:8554/</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>昆山现代农业二区</name>
+        </detail>
+        <detail id="3">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>昆山现代农业三区</name>
+        </detail>
+        <detail id="4">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>昆山现代农业四区</name>
+        </detail>
+        <detail id="5">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>昆山现代农业五区</name>
+        </detail>
+        <detail id="6">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>昆山现代农业六区</name>
+        </detail>
+        <detail id="7">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>昆山现代农业七区</name>
+        </detail>
+        <detail id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>昆山渔业管理系统</name>
+        </detail>
+        <detail id="9">
+           <type>Web</type>
+            <url>http://192.168.18.199/ks2.html</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>昆山水质监测</name>
+        </detail>
+        <detail id="10">
+           <type>Web</type>
+            <url>http://192.168.18.199/ks3.html</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>昆山产品信息</name>
+        </detail>
+    </info>
+    <info id="3" name="吴中信息中心">
+        <detail id="1">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>吴中现代农业一区</name>
+        </detail>
+        <detail id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>吴中现代农业二区</name>
+        </detail>
+        <detail id="3">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>吴中现代农业三区</name>
+        </detail>
+        <detail id="4">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>吴中现代农业四区</name>
+        </detail>
+         <detail id="5">
+           <type>Web</type>
+            <url>http://192.168.18.199/xc1.html</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>吴中区质量追溯</name>
+        </detail>
+        <detail id="6">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc2.html</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>吴中屠宰追溯</name>
+        </detail>
+        <detail id="7">
+           <type>Web</type>
+            <url>http://192.168.18.199/xc3.html</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>吴中特色产品</name>
+        </detail>
+        <detail id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc4.html</url>
+            <data>http://192.168.18.145/index.html?id=6</data>
+            <name>吴中生态旅游</name>
+        </detail>
+        <detail id="9">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc5.html</url>
+            <data>http://192.168.18.145/index.html?id=5</data>
+            <name>吴中龙头企业</name>
+        </detail>
+        <detail id="10">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc6.html</url>
+            <data>http://192.168.18.145/index.html?id=1</data>
+            <name>吴中产品供需</name>
+        </detail>
+    </info>
+    <info id="4" name="张家港农业基地">
+        <detail id="1">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=2</data>
+            <name>张家港现代农业一区</name>
+        </detail>
+        <detail id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=4</data>
+            <name>张家港现代农业二区</name>
+        </detail>
+        <detail id="3">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=1</data>
+            <name>张家港现代农业三区</name>
+        </detail>
+        <detail id="4">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=2</data>
+            <name>张家港现代农业四区</name>
+        </detail>
+        <detail id="5">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>张家港现代农业五区</name>
+        </detail>
+        <detail id="6">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>张家港现代农业六区</name>
+        </detail>
+        <detail id="7">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>张家港现代农业七区</name>
+        </detail>
+        <detail id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/tc1.html</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>张家港田园</name>
+        </detail>
+        <detail id="9">
+           <type>Web</type>
+            <url>http://192.168.18.199/tc2.html</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>张家港园区概览</name>
+        </detail>
+        <detail id="10">
+           <type>Web</type>
+            <url>http://www.tctianyuan.com/farm/farmInfo.action?farmId=402881e43730c1780137341bf2a60005</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>张家港电站村</name>
+        </detail>
+    </info>
+    <info id="5" name="常熟农业基地">
+        <detail id="1">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>常熟现代农业一区</name>
+        </detail>
+        <detail id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>常熟现代农业二区</name>
+        </detail>
+        <detail id="3">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>常熟现代农业三区</name>
+        </detail>
+        <detail id="4">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>常熟现代农业四区</name>
+        </detail>
+         <detail id="5">
+           <type>Web</type>
+            <url>http://192.168.18.199/xc1.html</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>常熟区质量追溯</name>
+        </detail>
+        <detail id="6">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc2.html</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>常熟屠宰追溯</name>
+        </detail>
+        <detail id="7">
+           <type>Web</type>
+            <url>http://192.168.18.199/xc3.html</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>常熟特色产品</name>
+        </detail>
+        <detail id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc4.html</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>常熟生态旅游</name>
+        </detail>
+        <detail id="9">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc5.html</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>常熟龙头企业</name>
+        </detail>
+        <detail id="10">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc6.html</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>常熟产品供需</name>
+        </detail>
+    </info>
+    <info id="6" name="太仓农业基地">
+        <detail id="1">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>太仓现代农业一区</name>
+        </detail>
+        <detail id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=2</data>
+            <name>太仓现代农业二区</name>
+        </detail>
+        <detail id="3">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=1</data>
+            <name>太仓现代农业三区</name>
+        </detail>
+        <detail id="4">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>太仓现代农业四区</name>
+        </detail>
+        <detail id="5">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>太仓现代农业五区</name>
+        </detail>
+        <detail id="6">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=5</data>
+            <name>太仓现代农业六区</name>
+        </detail>
+        <detail id="7">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>太仓现代农业七区</name>
+        </detail>
+        <detail id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/tc1.html</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>太仓田园</name>
+        </detail>
+        <detail id="9">
+           <type>Web</type>
+            <url>http://192.168.18.199/tc2.html</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>太仓园区概览</name>
+        </detail>
+        <detail id="10">
+           <type>Web</type>
+            <url>http://www.tctianyuan.com/farm/farmInfo.action?farmId=402881e43730c1780137341bf2a60005</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>太仓电站村</name>
+        </detail>
+    </info>
+    <info id="7" name="吴江农业基地">
+       <detail id="1">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>吴江现代农业一区</name>
+        </detail>
+        <detail id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>吴江现代农业二区</name>
+        </detail>
+        <detail id="3">
+            <type>Video</type>
+            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>吴江现代农业三区</name>
+        </detail>
+        <detail id="4">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.145/index.html?id=3</data>
+            <name>吴江现代农业四区</name>
+        </detail>
+         <detail id="5">
+           <type>Web</type>
+            <url>http://192.168.18.199/xc1.html</url>
+            <data>http://192.168.18.145/index.html?id=2</data>
+            <name>吴江区质量追溯</name>
+        </detail>
+        <detail id="6">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc2.html</url>
+            <data>http://192.168.18.145/index.html?id=1</data>
+            <name>吴江屠宰追溯</name>
+        </detail>
+        <detail id="7">
+           <type>Web</type>
+            <url>http://192.168.18.199/xc3.html</url>
+            <data>http://192.168.18.145/index.html?id=4</data>
+            <name>吴江特色产品</name>
+        </detail>
+        <detail id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc4.html</url>
+            <data>http://192.168.18.145/index.html?id=5</data>
+            <name>吴江生态旅游</name>
+        </detail>
+        <detail id="9">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc5.html</url>
+            <data>http://192.168.18.145/index.html?id=6</data>
+            <name>吴江龙头企业</name>
+        </detail>
+        <detail id="10">
+            <type>Web</type>
+            <url>http://192.168.18.199/xc6.html</url>
+            <data>http://192.168.18.145/index.html?id=7</data>
+            <name>吴江产品供需</name>
+        </detail>
+    </info>
+    
+      <info id="8" name="其他输入源">
+        <detail id="1">
+            <type>HDMI-VGA</type>
+            <url></url>
+            <data>3</data><!-- table insert input port -->
+            <name>桌插1</name>
+        </detail>
+        <detail id="2">
+             <type>HDMI-VGA</type>
+            <url></url>
+            <data>3</data><!-- table insert input port -->
+            <name>桌插2</name>
+        </detail>
+         <detail id="4">
+            <type>HDMI-VGA</type>
+            <url></url>
+            <data>3</data>
+            <name>远程会议</name>
+        </detail>
+         <detail id="4">
+            <type>Video</type>
+            <url>http://live.3gv.ifeng.com/zixun.m3u8</url>
+            <data></data>
+            <name>凤凰卫视直播</name>
+        </detail>
+        
+    </info>
+</infos>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IpcIp>
+    <address name="I1-1" ip="192.168.18.20" />
+    <address name="I1-2" ip="192.168.18.20" />
+    <address name="I2-1" ip="192.168.18.21" />
+    <address name="I2-2" ip="192.168.18.21" />
+    <address name="I3-1" ip="192.168.18.22" />
+    <address name="I3-2" ip="192.168.18.22" />
+    <address name="I4-1" ip="192.168.18.23" />
+    <address name="I4-2" ip="192.168.18.23" />
+</IpcIp>
