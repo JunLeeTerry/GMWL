@@ -1,0 +1,52 @@
+10
+
+dir
+2
+http://code.taobao.org/svn/vlc-android-demo/res
+http://code.taobao.org/svn/vlc-android-demo
+
+
+
+2015-03-19T06:32:00.024200Z
+1
+lang_xia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+86e3c222-1ec9-4041-b408-e7869bf612ea
+
+values
+dir
+
+values-w820dp
+dir
+
+drawable-hdpi
+dir
+
+drawable-xxhdpi
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+
+drawable-xhdpi
+dir
+
+layout
+dir
+

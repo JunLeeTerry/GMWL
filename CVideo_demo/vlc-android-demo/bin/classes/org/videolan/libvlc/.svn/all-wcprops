@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/vlc-android-demo/!svn/ver/1/src/org/videolan/libvlc
+END
+EventHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/vlc-android-demo/!svn/ver/1/src/org/videolan/libvlc/EventHandler.java
+END
+Media.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/vlc-android-demo/!svn/ver/1/src/org/videolan/libvlc/Media.java
+END
+TrackInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/vlc-android-demo/!svn/ver/1/src/org/videolan/libvlc/TrackInfo.java
+END
+AudioOutput.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/vlc-android-demo/!svn/ver/1/src/org/videolan/libvlc/AudioOutput.java
+END
+LibVlcUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/vlc-android-demo/!svn/ver/1/src/org/videolan/libvlc/LibVlcUtil.java
+END
+LibVlcException.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/vlc-android-demo/!svn/ver/1/src/org/videolan/libvlc/LibVlcException.java
+END
+LibVLC.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/vlc-android-demo/!svn/ver/1/src/org/videolan/libvlc/LibVLC.java
+END
+MediaList.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/vlc-android-demo/!svn/ver/1/src/org/videolan/libvlc/MediaList.java
+END
+IVideoPlayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/vlc-android-demo/!svn/ver/1/src/org/videolan/libvlc/IVideoPlayer.java
+END
