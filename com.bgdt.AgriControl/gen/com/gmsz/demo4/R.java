@@ -1327,6 +1327,7 @@ containing a value of this type.
         public static final int fileError=0x7f0a0015;
         public static final int hello_world=0x7f0a001c;
         public static final int loading=0x7f0a001a;
+        public static final int nonetworktip=0x7f0a0021;
         public static final int onwallSuccess=0x7f0a0019;
         public static final int onwall_text=0x7f0a0014;
         public static final int openSuccess=0x7f0a0017;

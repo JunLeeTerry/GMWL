@@ -171,7 +171,8 @@ public class FrameAdapter extends BaseAdapter {
 		if (screenCount == 2) {
 			width = 1780;
 		} else if (screenCount == 3) {
-			width = 593;// 三分屏
+			//width = 593;// 三分屏
+			width = 856;
 		}
 
 		else if (screenCount == 3 && position == 1) {

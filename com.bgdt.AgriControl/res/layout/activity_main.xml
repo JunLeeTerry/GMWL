@@ -71,9 +71,9 @@
         android:paddingLeft="2dp"
         android:paddingRight="2dp"
         android:paddingTop="10dp"
-        android:layout_marginRight="16dp"
         android:stretchMode="columnWidth"
         android:verticalSpacing="1dp" />
+       <!-- android:layout_marginRight="16dp" -->
     <!--
          <com.gmsz.view.SceneGridView
         android:id="@+id/sceneGv"

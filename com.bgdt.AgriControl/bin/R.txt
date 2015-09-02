@@ -421,6 +421,7 @@ int string close_text 0x7f0a0013
 int string fileError 0x7f0a0015
 int string hello_world 0x7f0a001c
 int string loading 0x7f0a001a
+int string nonetworktip 0x7f0a0021
 int string onwallSuccess 0x7f0a0019
 int string onwall_text 0x7f0a0014
 int string openSuccess 0x7f0a0017
