@@ -105,6 +105,11 @@ public class MainActivity extends Activity {
 
 		showBaseInfo();
 		showBaseDetailInfo(0);
+
+		if (!isNetworkAvailable(this)) {
+			Toast.makeText(getApplicationContext(), R.string.nonetworktip,
+					Toast.LENGTH_LONG).show();
+		}
 	}
 
 	/*
@@ -377,17 +382,11 @@ public class MainActivity extends Activity {
 	 * @param view
 	 */
 	public void openScreen(View view) {
-		// 如何有网络的情况下发送数据包
-		if (isNetworkAvailable(this)) {
-			demoService.open();
-			Toast.makeText(getApplicationContext(), R.string.openSuccess,
-					Toast.LENGTH_LONG).show();
-		}
-		// 如果没有网络的情况下提示请先连接网络
-		else {
-			Toast.makeText(getApplicationContext(), R.string.nonetworktip,
-					Toast.LENGTH_LONG).show();
-		}
+
+		demoService.open();
+		Toast.makeText(getApplicationContext(), R.string.openSuccess,
+				Toast.LENGTH_LONG).show();
+
 	}
 
 	/**
@@ -397,14 +396,11 @@ public class MainActivity extends Activity {
 	 * @param view
 	 */
 	public void closeScreen(View view) {
-		if (isNetworkAvailable(this)) {
-			demoService.close();
-			Toast.makeText(getApplicationContext(), R.string.closeSuccess,
-					Toast.LENGTH_LONG).show();
-		} else {
-			Toast.makeText(getApplicationContext(), R.string.nonetworktip,
-					Toast.LENGTH_LONG).show();
-		}
+
+		demoService.close();
+		Toast.makeText(getApplicationContext(), R.string.closeSuccess,
+				Toast.LENGTH_LONG).show();
+
 	}
 
 	/**
