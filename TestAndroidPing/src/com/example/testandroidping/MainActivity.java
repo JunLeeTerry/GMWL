@@ -6,6 +6,7 @@ import com.example.testandroidping.R.id;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,7 +18,8 @@ public class MainActivity extends Activity {
 	private Button pingButton;
 	private TextView textView;
 	
-	private static final String HOST = "192.168.18.20";
+	private static final String HOST = "192.168.1.20";
+	//private static final String HOST = "www.baidu.com";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +53,12 @@ public class MainActivity extends Activity {
 		int status = -1;
 		Process p;
 		try {
-			p = Runtime.getRuntime().exec("ping -c 4 -w 100 " + host);
-			
-			status = p.waitFor();
+			p = Runtime.getRuntime().exec("ping -c 1 -w 500 " + host + "\n");
+			//p.wait(500);
+			//status = p.waitFor();
+			Thread.sleep(500);
+			status = p.exitValue();
+			Log.e("ping status",status+"");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 import java.util.List;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
@@ -35,13 +36,14 @@ public class FrameAdapter extends BaseAdapter {
 	private int resource;// 绑定的条目界面
 	private LayoutInflater inflater;
 	private int screenCount;// 几分屏
-	private Activity ac;//MainActivity;
+	private Activity ac;// MainActivity;
 
 	public FrameAdapter(Context context, List<Frame> frames, int resource) {
 		this.frames = frames;
 		this.resource = resource;
 		this.ac = (Activity) context;
-		inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		inflater = (LayoutInflater) context
+				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
 		screenCount = frames.size();
 	}
@@ -61,19 +63,18 @@ public class FrameAdapter extends BaseAdapter {
 		return position;
 	}
 
-	@SuppressLint("ViewHolder")
+	@SuppressLint({ "ViewHolder", "NewApi" })
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		try {
-
 			Frame frame = frames.get(position);// 一个画面
 
 			if (!frame.isChange()) {
 				Log.i(TAG, frame.getConvertView().toString());
 				return frame.getConvertView();
 			}
-			Log.i("Demo",
-					position + "name:" + frame.getName() + ",url:" + frame.getUrl() + "change:" + frame.isChange());
+			Log.i("Demo", position + "name:" + frame.getName() + ",url:"
+					+ frame.getUrl() + "change:" + frame.isChange());
 			frame.setChange(false);
 			frame.stopPlay();
 
@@ -90,57 +91,50 @@ public class FrameAdapter extends BaseAdapter {
 			textView.getBackground().setAlpha(100);
 			int width = getWidth(position);
 			int height = getHeight(position);
-			surfaceView = (SurfaceView) convertView.findViewById(R.id.videoView);
-			FrameLayout.LayoutParams videoViewParams = (FrameLayout.LayoutParams) surfaceView.getLayoutParams(); // 取控件textView当前的布局参数
+			surfaceView = (SurfaceView) convertView
+					.findViewById(R.id.videoView);
+			FrameLayout.LayoutParams videoViewParams = (FrameLayout.LayoutParams) surfaceView
+					.getLayoutParams(); // 取控件textView当前的布局参数
 			webView = (WebView) convertView.findViewById(R.id.webView);
 			WebSettings settings = webView.getSettings();
-			settings.setUseWideViewPort(true);//设定支持viewport
-			//settings.setLoadWithOverviewMode(true);//设置web自适应屏幕大小
-			//settings.setJavaScriptEnabled(true);//设定支持js
-			//settings.setBuiltInZoomControls(true);
-			//settings.setSupportZoom(true);//设定支持缩放  
-			
-			//webview 自适应屏幕
-			webView.getSettings().setLayoutAlgorithm(LayoutAlgorithm.SINGLE_COLUMN);
+			settings.setUseWideViewPort(true);// 设定支持viewport
+			settings.setLoadWithOverviewMode(true);//设置web自适应屏幕大小
+			settings.setJavaScriptEnabled(true);//设定支持js
+			// settings.setBuiltInZoomControls(true);
+			// settings.setSupportZoom(true);//设定支持缩放
+
+			// webview 自适应屏幕
+			webView.getSettings().setLayoutAlgorithm(
+					LayoutAlgorithm.SINGLE_COLUMN);
 			webView.getSettings().setLoadWithOverviewMode(true);
-			
-			if ("WEB".equals(type.toUpperCase()) || "HDMI-VGA".equals(type) || "VIDEO".equals(type.toUpperCase())) {
-				FrameLayout.LayoutParams linearParams = (FrameLayout.LayoutParams) webView.getLayoutParams(); // 取控件textView当前的布局参数
-				linearParams.height = height;// 控件的 高度
-				linearParams.width = width;// 控件的宽度
-				//imageView.setLayoutParams(linearParams); // 使设置好的布局参数应用到控件</pre>
-				webView.setLayoutParams(linearParams);
-			   videoViewParams.height = 0;// 控件的 高度
-				videoViewParams.width = 0;// 控件的宽度
-			/*textView.setHeight(height);
-				textView.setWidth(width);*/
 
-			} else {
-				int oldHeight = videoViewParams.height;
-				int oldWidth = videoViewParams.width;
-				if (oldHeight < 200) {
-					videoViewParams.height = height;// 控件的 高度
-					videoViewParams.width = width;// 控件的宽度
-				} else {// 为了让surfaceView 重绘 则修改一下它的宽度
-					videoViewParams.height = height;// 控件的 高度
-					videoViewParams.width = oldWidth - 1;// 控件的宽度
-				}
-			}
-			surfaceView.setLayoutParams(videoViewParams); // 使设置好的布局参数应用到控件</pre>
+			FrameLayout.LayoutParams linearParams = (FrameLayout.LayoutParams) webView
+					.getLayoutParams(); // 取控件webView当前的布局参数
+			linearParams.height = height;// 控件的 高度
+			linearParams.width = width;// 控件的宽度
+			// imageView.setLayoutParams(linearParams); // 使设置好的布局参数应用到控件</pre>
+			webView.setLayoutParams(linearParams);
+			videoViewParams.height = 0;// 控件的 高度
+			videoViewParams.width = 0;// 控件的宽度
+			/*
+			 * textView.setHeight(height); textView.setWidth(width);
+			 */
 
+			// 使用硬件加速
+			webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+
+			webView.loadUrl(frame.getData());
+			Log.w("DragGridView", "控件高度: " + webView.getLayoutParams().height
+					+ "控件宽度： " + webView.getLayoutParams().width + "预览网页地址： "
+					+ frame.getData());
+			// webView.loadDataWithBaseURL(frame.getData(), "", "text/html",
+			// "utf-8", "");
 			// 下面代码实现数据绑定
 			textView.setText(frame.getName());
-			if ("Web".equals(type) || "Video".equals(type)) {		
-					webView.loadUrl(frame.getData());	
-			} else {// 显示一张电脑图片
-					
-				//String str = "http://192.168.18.145/index.html?id=default";
-				String defaulturl = MixcellaneousUtil.getInstance().getTableInsertDefaultUrl();
-				webView.loadUrl(defaulturl);
-			} 
+
 			frame.setConvertView(convertView);
 		} catch (Exception e) {
-			Log.e("Demo", "getView：" +e.getMessage());
+			Log.e("Demo", "getView：" + e.getMessage());
 		}
 		return convertView;
 	}
@@ -171,7 +165,7 @@ public class FrameAdapter extends BaseAdapter {
 		if (screenCount == 2) {
 			width = 1780;
 		} else if (screenCount == 3) {
-			//width = 593;// 三分屏
+			// width = 593;// 三分屏
 			width = 856;
 		}
 

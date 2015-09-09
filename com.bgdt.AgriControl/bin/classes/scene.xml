@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scenes>
-    <scene id="1" name="场景1">
+    <scene id="1" name="场景1" spilit="8">
         <frame id="1">
              <type>Video</type>
             <url>rtsp://192.168.18.137:8554/</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
+            <data>http://192.168.18.126/index.html?id=2</data>
             <name>相城现代农业一区</name>
         </frame>
         <frame id="2">
             <type>Video</type>
             <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
+            <data>http://192.168.18.126/index.html?id=2</data>
             <name>相城现代农业二区</name>
         </frame>
         <frame id="3">
            <type>Web</type>
             <url>http://192.168.18.199/ks1.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
+            <data>http://192.168.18.126/index.html?id=2</data>
             <name>test1</name>
         </frame>
         <frame id="4">
             <type>Web</type>
             <url>http://192.168.18.199/ks1.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
+            <data>http://192.168.18.126/index.html?id=2</data>
             <name>test</name>
         </frame>
          <frame id="5">
@@ -34,244 +34,429 @@
         <frame id="6">
              <type>Web</type>
              <url>http://192.168.18.199/ks1.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
+            <data>http://192.168.18.126/index.html?id=2</data>
              <name>新浪</name>
         </frame>
         <frame id="7">
            <type>Web</type>
             <url>http://www.gmwinlead.com</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
+            <data>http://192.168.18.126/index.html?id=2</data>
             <name>国贸</name>
         </frame>
          <frame id="8">
             <type>Web</type>
             <url>http://192.168.18.199/ks1.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
+            <data>http://192.168.18.126/index.html?id=2</data>
             <name>昆山渔业管理系统</name>
         </frame>
        
     </scene>
-    <scene id="2" name="场景2">
-        <frame id="9">
-            <type>Video</type>
-            <url>rtsp://192.168.18.20:8554/</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>相城现代农业test</name>
-        </frame>
-        <frame id="10">
-            <type>Web</type>
-            <url>http://192.168.18.199/tc1.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>太仓田园</name>
-        </frame>
-        <frame id="11">
-            <type>Video</type>
-            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>相城现代农业二区</name>
-        </frame>
-        <frame id="12">
-            <type>Web</type>
-            <url>http://58.211.162.60/</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>昆山信息中心</name>
-        </frame>
-    </scene>
-    <scene id="3" name="场景3">
-        <frame id="13">
-             <type>Video</type>
-            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
-             <data>http://192.168.18.145/index.html?id=2</data>
-            <name>昆山现代农业一区</name>
-        </frame>
-       
-        <frame id="14">
-            <type>Web</type>
-            <url>http://192.168.18.199/xc1.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>相城区质量追溯</name>
-        </frame>
-    </scene>
-    <scene id="4" name="场景4">
+     <scene id="2" name="场景2" spilit="8">
         <frame id="1">
-            <type>Web</type>
-            <url>http://192.168.18.199/xc1.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>一站式服务中心</name>
-        </frame>
-        <frame id="2">
-             <type>Web</type>
-            <url>http://192.168.18.199/xc1.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>统计局</name>
-        </frame>
-        <frame id="3">
-            <type>Video</type>
-            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>相城现代农业三区</name>
-        </frame>
-        <frame id="4">
-            <type>HDMI-VGA</type>
-             <url>http://192.168.18.199/xc1.html</url>
-            <data>3</data>
-            <name>桌插2</name>
-        </frame>
-         <frame id="5">
-           <type>Web</type>
-             <url>http://192.168.18.199/xc1.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-             <name>建设局</name>
-        </frame>
-        <frame id="6">
-            <type>Video</type>
-            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>昆山现代农业一区</name>
-        </frame>
-        <frame id="7">
-           <type>Web</type>
-            <url>http://192.168.18.199/xc6.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-             <name>相城产品供需</name>
-        </frame>
-        <frame id="8">
-            <type>Web</type>
-            <url>http://192.168.18.199/ks1.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-             <name>昆山渔业管理系统</name>
-        </frame>
-    </scene>
-    <scene id="5" name="场景5">
-        <frame id="9">
              <type>Video</type>
-            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100/</url>
-             <data>http://192.168.18.145/index.html?id=2</data>
-            <name>吴中现代农业四区</name>
-        </frame>
-        <frame id="10">
-            <type>Web</type>
-            <url>http://192.168.18.199/xc3.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>相城特色产品</name>
-        </frame>
-        <frame id="11">
-            <type>Web</type>
-             <url>http://192.168.18.199/tc3.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>太仓电站村</name>
-        </frame>
-        <frame id="12">
-            <type>Web</type>
-            <url>http://192.168.18.199/xc4.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>相城生态旅</name>
-        </frame>
-    </scene>
-    <scene id="6" name="场景6">
-        <frame id="13">
-             <type>Video</type>
-            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
-             <data>http://192.168.18.145/index.html?id=2</data>
-            <name>吴江现代农业四区</name>
-        </frame>
-       
-        <frame id="14">
-            <type>Web</type>
-            <url>http://192.168.18.199/xc1.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>相城区质量追溯</name>
-        </frame>
-    </scene>
-    <scene id="7" name="场景7">
-        <frame id="1">
-            <type>Web</type>
-            <url>http://192.168.18.199/ks2.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>昆山水质监测</name>
-        </frame>
-        <frame id="2">
-             <type>Web</type>
-            <url>http://192.168.18.199/ks2.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>昆山产品信息</name>
-        </frame>
-        <frame id="3">
-            <type>Video</type>
-            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>张家港现代农业一区</name>
-        </frame>
-        <frame id="4">
-            <type>HDMI-VGA</type>
-             <url>http://192.168.18.199/xc1.html</url>
-            <data>3</data>
-            <name>桌插2</name>
-        </frame>
-         <frame id="5">
-           <type>Web</type>
-             <url>http://192.168.18.199/tc2.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-             <name>太仓园区概览</name>
-        </frame>
-        <frame id="6">
-            <type>Video</type>
-            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>吴中现代农业一区</name>
-        </frame>
-        <frame id="7">
-           <type>Web</type>
-            <url>http://192.168.18.199/xc6.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-             <name>相城产品供需</name>
-        </frame>
-        <frame id="8">
-            <type>Web</type>
-            <url>http://192.168.18.199/ks1.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-             <name>昆山渔业管理系统</name>
-        </frame>
-    </scene>
-    <scene id="8" name="场景8">
-        <frame id="9">
-             <type>Video</type>
-            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100/</url>
-             <data>http://192.168.18.145/index.html?id=2</data>
-            <name>相城现代农业四区</name>
-        </frame>
-        <frame id="10">
-            <type>Web</type>
-            <url>http://192.168.18.199/xc3.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>相城特色产品</name>
-        </frame>
-        <frame id="11">
-            <type>Web</type>
-             <url>http://192.168.18.199/tc3.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>太仓电站村</name>
-        </frame>
-        <frame id="12">
-            <type>Web</type>
-            <url>http://192.168.18.199/xc4.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>相城生态旅</name>
-        </frame>
-    </scene>
-    <scene id="9" name="场景9">
-        <frame id="13">
-             <type>Video</type>
-            <url>rtsp://192.168.18.220:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
-             <data>http://192.168.18.145/index.html?id=2</data>
+            <url>rtsp://192.168.18.137:8554/</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
             <name>相城现代农业一区</name>
         </frame>
-       
-        <frame id="14">
-            <type>Web</type>
-            <url>http://192.168.18.199/xc1.html</url>
-            <data>http://192.168.18.145/index.html?id=2</data>
-            <name>相城区质量追溯</name>
+        <frame id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业二区</name>
         </frame>
+        <frame id="3">
+           <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test1</name>
+        </frame>
+        <frame id="4">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test</name>
+        </frame>
+         <frame id="5">
+            <type>HDMI-VGA</type>
+            <url></url>
+            <data>3</data>
+            <name>桌插2</name>
+        </frame>
+        <frame id="6">
+             <type>Web</type>
+             <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+             <name>新浪</name>
+        </frame>
+        <frame id="7">
+           <type>Web</type>
+            <url>http://www.gmwinlead.com</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>国贸</name>
+        </frame>
+         <frame id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>昆山渔业管理系统</name>
+        </frame>
+       
+    </scene>
+     <scene id="3" name="场景3" spilit="8">
+        <frame id="1">
+             <type>Video</type>
+            <url>rtsp://192.168.18.137:8554/</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业一区</name>
+        </frame>
+        <frame id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业二区</name>
+        </frame>
+        <frame id="3">
+           <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test1</name>
+        </frame>
+        <frame id="4">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test</name>
+        </frame>
+         <frame id="5">
+            <type>HDMI-VGA</type>
+            <url></url>
+            <data>3</data>
+            <name>桌插2</name>
+        </frame>
+        <frame id="6">
+             <type>Web</type>
+             <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+             <name>新浪</name>
+        </frame>
+        <frame id="7">
+           <type>Web</type>
+            <url>http://www.gmwinlead.com</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>国贸</name>
+        </frame>
+         <frame id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>昆山渔业管理系统</name>
+        </frame>
+       
+    </scene>
+     <scene id="4" name="场景4" spilit="8">
+        <frame id="1">
+             <type>Video</type>
+            <url>rtsp://192.168.18.137:8554/</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业一区</name>
+        </frame>
+        <frame id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业二区</name>
+        </frame>
+        <frame id="3">
+           <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test1</name>
+        </frame>
+        <frame id="4">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test</name>
+        </frame>
+         <frame id="5">
+            <type>HDMI-VGA</type>
+            <url></url>
+            <data>3</data>
+            <name>桌插2</name>
+        </frame>
+        <frame id="6">
+             <type>Web</type>
+             <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+             <name>新浪</name>
+        </frame>
+        <frame id="7">
+           <type>Web</type>
+            <url>http://www.gmwinlead.com</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>国贸</name>
+        </frame>
+         <frame id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>昆山渔业管理系统</name>
+        </frame>
+       
+    </scene>
+    <scene id="5" name="场景5" spilit="8">
+        <frame id="1">
+             <type>Video</type>
+            <url>rtsp://192.168.18.137:8554/</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业一区</name>
+        </frame>
+        <frame id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业二区</name>
+        </frame>
+        <frame id="3">
+           <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test1</name>
+        </frame>
+        <frame id="4">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test</name>
+        </frame>
+         <frame id="5">
+            <type>HDMI-VGA</type>
+            <url></url>
+            <data>3</data>
+            <name>桌插2</name>
+        </frame>
+        <frame id="6">
+             <type>Web</type>
+             <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+             <name>新浪</name>
+        </frame>
+        <frame id="7">
+           <type>Web</type>
+            <url>http://www.gmwinlead.com</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>国贸</name>
+        </frame>
+         <frame id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>昆山渔业管理系统</name>
+        </frame>
+       
+    </scene>
+     <scene id="6" name="场景6" spilit="8">
+        <frame id="1">
+             <type>Video</type>
+            <url>rtsp://192.168.18.137:8554/</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业一区</name>
+        </frame>
+        <frame id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业二区</name>
+        </frame>
+        <frame id="3">
+           <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test1</name>
+        </frame>
+        <frame id="4">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test</name>
+        </frame>
+         <frame id="5">
+            <type>HDMI-VGA</type>
+            <url></url>
+            <data>3</data>
+            <name>桌插2</name>
+        </frame>
+        <frame id="6">
+             <type>Web</type>
+             <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+             <name>新浪</name>
+        </frame>
+        <frame id="7">
+           <type>Web</type>
+            <url>http://www.gmwinlead.com</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>国贸</name>
+        </frame>
+         <frame id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>昆山渔业管理系统</name>
+        </frame>
+       
+    </scene>
+     <scene id="7" name="场景7" spilit="8">
+        <frame id="1">
+             <type>Video</type>
+            <url>rtsp://192.168.18.137:8554/</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业一区</name>
+        </frame>
+        <frame id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业二区</name>
+        </frame>
+        <frame id="3">
+           <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test1</name>
+        </frame>
+        <frame id="4">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test</name>
+        </frame>
+         <frame id="5">
+            <type>HDMI-VGA</type>
+            <url></url>
+            <data>3</data>
+            <name>桌插2</name>
+        </frame>
+        <frame id="6">
+             <type>Web</type>
+             <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+             <name>新浪</name>
+        </frame>
+        <frame id="7">
+           <type>Web</type>
+            <url>http://www.gmwinlead.com</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>国贸</name>
+        </frame>
+         <frame id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>昆山渔业管理系统</name>
+        </frame>
+       
+    </scene>
+     <scene id="8" name="场景8" spilit="8">
+        <frame id="1">
+             <type>Video</type>
+            <url>rtsp://192.168.18.137:8554/</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业一区</name>
+        </frame>
+        <frame id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业二区</name>
+        </frame>
+        <frame id="3">
+           <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test1</name>
+        </frame>
+        <frame id="4">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test</name>
+        </frame>
+         <frame id="5">
+            <type>HDMI-VGA</type>
+            <url></url>
+            <data>3</data>
+            <name>桌插2</name>
+        </frame>
+        <frame id="6">
+             <type>Web</type>
+             <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+             <name>新浪</name>
+        </frame>
+        <frame id="7">
+           <type>Web</type>
+            <url>http://www.gmwinlead.com</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>国贸</name>
+        </frame>
+         <frame id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>昆山渔业管理系统</name>
+        </frame>
+       
+    </scene>
+    <scene id="9" name="场景9" spilit="8">
+        <frame id="1">
+             <type>Video</type>
+            <url>rtsp://192.168.18.137:8554/</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业一区</name>
+        </frame>
+        <frame id="2">
+            <type>Video</type>
+            <url>rtsp://192.168.18.221:554/user=admin&amp;password=&amp;channel=1&amp;stream=0.sdp?real_stream--rtp-caching=100</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>相城现代农业二区</name>
+        </frame>
+        <frame id="3">
+           <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test1</name>
+        </frame>
+        <frame id="4">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>test</name>
+        </frame>
+         <frame id="5">
+            <type>HDMI-VGA</type>
+            <url></url>
+            <data>3</data>
+            <name>桌插2</name>
+        </frame>
+        <frame id="6">
+             <type>Web</type>
+             <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+             <name>新浪</name>
+        </frame>
+        <frame id="7">
+           <type>Web</type>
+            <url>http://www.gmwinlead.com</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>国贸</name>
+        </frame>
+         <frame id="8">
+            <type>Web</type>
+            <url>http://192.168.18.199/ks1.html</url>
+            <data>http://192.168.18.126/index.html?id=2</data>
+            <name>昆山渔业管理系统</name>
+        </frame>
+       
     </scene>
 </scenes>

@@ -95,46 +95,4 @@ public class IpcScreanUtil {
 		}
 		return list;
 	}
-	
-	
-	
-	/**
-	 * 
-	 * Description: 分屏处理数据
-	 * 
-	 * @param screan
-	 *            几分屏 8 4 3 2
-	 * @return
-	 */
-	public static List<Frame> getSplitFrame(List<Frame> frameList, int screan) {
-		List<Frame> list = new ArrayList<Frame>();
-		int size=frameList.size();
-		while(size<screan){
-			Frame temp=new Frame();
-			frameList.add(temp);
-			size++;
-		}
-		switch (screan) {
-		case 8:
-			
-		case 4:
-			for(int i=0;i<screan;i++){
-				list.add(frameList.get(i));
-			}
-			break;
-		case 3:
-			list.add(frameList.get(0));
-			list.add(frameList.get(1));
-			list.add(frameList.get(3));
-			break;
-		case 2:
-			list.add(frameList.get(0));
-			list.add(frameList.get(2));
-			break;
-		default:
-			break;
-		}
-		return list;
-	}
-
 }

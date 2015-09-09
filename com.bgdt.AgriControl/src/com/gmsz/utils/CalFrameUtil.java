@@ -53,10 +53,10 @@ public class CalFrameUtil {
 			}
 			//没有处理3屏的情况，添加处理3屏的情况-terry
 			else if(size == 3){
-				if(x<416){
+				if(x<426){
 					i = 0;
 				}
-				else if(416<=x&&x<832){
+				else if(426<=x&&x<1279){
 					i = 1;
 				}
 				else{

@@ -9,6 +9,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,6 +39,7 @@ import com.gmsz.domain.SplitInfo;
 import com.gmsz.preview.PreViewAdapter;
 import com.gmsz.service.UdpService;
 import com.gmsz.utils.IpcScreanUtil;
+import com.gmsz.utils.PingTestUtil;
 import com.gmsz.view.DragGridView;
 
 public class MainActivity extends Activity {
@@ -47,7 +49,7 @@ public class MainActivity extends Activity {
 	protected static final int Menu_About = Menu.FIRST + 1;
 	protected static final int Menu_Exit = Menu.FIRST + 2;
 	private UdpService demoService;
-	private List<Scene> sceneList;// 所有场景信息
+	public static List<Scene> sceneList;// 所有场景信息
 	private Spinner sceneSp;// 场景下拉框
 	private ArrayAdapter<String> adapter;// 适配器
 	private String[] spValue;// 场景下拉控件值
@@ -134,6 +136,7 @@ public class MainActivity extends Activity {
 	 */
 	private void readData() {
 		try {
+			// sceneList = UdpService.getScenes();
 			sceneList = demoService.getScenes();
 			spValue = new String[sceneList.size()];
 			for (int i = 0; i < sceneList.size(); i++) {
@@ -142,6 +145,8 @@ public class MainActivity extends Activity {
 			}
 			splitInfoList = demoService.getSplitInfos();
 			baseInfoList = demoService.getBaseInfos();
+
+			// SenceSaveUtil.getInstance(this).saveSence(sceneList, 0);
 		} catch (Exception e) {
 			Log.e(TAG, e.getMessage(), e);
 			Toast.makeText(getApplicationContext(), R.string.fileError,
@@ -191,6 +196,26 @@ public class MainActivity extends Activity {
 	}
 
 	/**
+	 * 选择分屏
+	 * 
+	 * 返回值：是否改变了当前选中的分屏的值
+	 */
+	private boolean selectSpinnerItem() {
+		// 下拉控件相关
+		splitSp = (Spinner) findViewById(R.id.splitSp);
+		int splitCount = currScene.getSpilit();
+		for (SplitInfo splitInfo : splitInfoList) {
+			if (splitInfo.getSplitValue() == splitCount) {
+				if (splitInfo.getId() != splitSp.getSelectedItemPosition()) {
+					splitSp.setSelection(splitInfo.getId());
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	/**
 	 * 
 	 * 现在左边基本信息
 	 */
@@ -230,17 +255,14 @@ public class MainActivity extends Activity {
 	/**
 	 * 显示场景画面 Description: please write your description
 	 */
-	private void showFrame(Scene scene) {
+	private void showFrame() {
 		// 切换场景之前先把当前屏幕正在播的视频停止
 		stopCurrVideo();
 
-		currScene = scene;// 当前显示的场景
-		currFrames = scene.getFrameList();
-		if (currFrames.size() < 4) {
-			sceneGv.setNumColumns(currFrames.size());// 设置列数，三分屏3列，二分屏两列
-		} else {
-			sceneGv.setNumColumns(4);
-		}
+		// currScene = scene;// 当前显示的场景
+		currFrames = currScene.getVisibleSplitFrame();
+		sceneGv.setNumColumns(currFrames.size() / 5 + currFrames.size() % 5);// 设置列数，三分屏3列，二分屏两列
+
 		try {
 			FrameAdapter frameAdapter = new FrameAdapter(this, currFrames,
 					R.layout.frameitem);
@@ -269,7 +291,6 @@ public class MainActivity extends Activity {
 			sceneGv.setNumColumns(screan);// 设置列数，三分屏3列，二分屏两列
 		} else {
 			sceneGv.setNumColumns(4);
-
 		}
 
 		try {
@@ -314,7 +335,11 @@ public class MainActivity extends Activity {
 			Toast.makeText(getApplicationContext(), "显示场景", Toast.LENGTH_SHORT)
 					.show();
 			Scene scene = sceneList.get(arg2);// 当前选中场景
-			showFrame(scene);
+			currScene = scene;
+			//如何选择的场景没有改变的话，就在场景切换后执行showframe
+			if (!selectSpinnerItem()) {
+				showFrame();
+			}
 		}
 
 		public void onNothingSelected(AdapterView<?> arg0) {
@@ -328,10 +353,9 @@ public class MainActivity extends Activity {
 				long arg3) {
 			// TODO Auto-generated method stub
 			SplitInfo split = splitInfoList.get(arg2);
-			List<Frame> frames = currScene.getFrameList();
-			List<Frame> splitframes = IpcScreanUtil.getSplitFrame(frames,
-					split.getSplitValue());
-			showSplitFrames(splitframes, split.getSplitValue());
+			currScene.setSpilit(split.getSplitValue());
+			showFrame();
+			UdpService.writeSence(MainActivity.this, sceneList);
 
 		}
 
@@ -382,7 +406,10 @@ public class MainActivity extends Activity {
 	 * @param view
 	 */
 	public void openScreen(View view) {
-
+		if (!PingTestUtil.getInstance().pingSControllerHost()) {
+			Toast.makeText(getApplicationContext(), R.string.ping_scontroller,
+					Toast.LENGTH_LONG);
+		}
 		demoService.open();
 		Toast.makeText(getApplicationContext(), R.string.openSuccess,
 				Toast.LENGTH_LONG).show();
@@ -396,7 +423,10 @@ public class MainActivity extends Activity {
 	 * @param view
 	 */
 	public void closeScreen(View view) {
-
+		if (!PingTestUtil.getInstance().pingSControllerHost()) {
+			Toast.makeText(getApplicationContext(), R.string.ping_scontroller,
+					Toast.LENGTH_LONG);
+		}
 		demoService.close();
 		Toast.makeText(getApplicationContext(), R.string.closeSuccess,
 				Toast.LENGTH_LONG).show();
@@ -422,16 +452,18 @@ public class MainActivity extends Activity {
 		return preview_view;
 	}
 
-	// 判断是否有网络连接
+	// 判断是否有无无线网连接
 	private boolean isNetworkAvailable(Context context) {
 		ConnectivityManager cm = (ConnectivityManager) context
 				.getSystemService(Context.CONNECTIVITY_SERVICE);
+
 		if (cm == null) {
 		} else {
 			NetworkInfo[] info = cm.getAllNetworkInfo();
 			if (info != null) {
 				for (int i = 0; i < info.length; i++) {
-					if (info[i].getState() == NetworkInfo.State.CONNECTED) {
+					// if (info[i].getState() == NetworkInfo.State.CONNECTED) {
+					if (info[i].getType() == ConnectivityManager.TYPE_WIFI) {
 						return true;
 					}
 				}
@@ -439,4 +471,24 @@ public class MainActivity extends Activity {
 		}
 		return false;
 	}
+
+	private long exitTime;
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK
+				&& event.getAction() == KeyEvent.ACTION_DOWN) {
+			if ((System.currentTimeMillis() - exitTime) > 2000) {
+				Toast.makeText(getApplicationContext(), "再按一次退出程序",
+						Toast.LENGTH_SHORT).show();
+				exitTime = System.currentTimeMillis();
+			} else {
+				finish();
+				System.exit(0);
+			}
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+
 }

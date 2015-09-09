@@ -17,8 +17,12 @@ public class MixcellaneousUtil {
 	private String matrixName;
 	private String matrixIp;
 	private Integer matrixPort;
-	private String tableInsertDefaultUrl;
-
+	private String scontrollerName;
+	private String scontrollerIp;
+	private Integer scontrollerPort;
+	private String defaultUrl;
+	private String hdmiDefaultUrl;
+	
 	private MixcellaneousUtil() {
 		try {
 			parseXML();
@@ -34,6 +38,18 @@ public class MixcellaneousUtil {
 		return mixcellaneousUtil;
 	}
 
+	public String getScontrollerName(){
+		return this.scontrollerName;
+	}
+	
+	public String getScontrollerIp(){
+		return this.scontrollerIp;
+	}
+	
+	public Integer getScontrollerPort(){
+		return this.scontrollerPort;
+	}
+	
 	public String getMatrixName() {
 		return this.matrixName;
 	}
@@ -46,8 +62,12 @@ public class MixcellaneousUtil {
 		return this.matrixPort;
 	}
 
-	public String getTableInsertDefaultUrl() {
-		return this.tableInsertDefaultUrl;
+	public String getDefaultUrl() {
+		return this.defaultUrl;
+	}
+	
+	public String getHDMIDefaultUrl(){
+		return this.hdmiDefaultUrl;
 	}
 
 	private void parseXML() throws XmlPullParserException, IOException {
@@ -68,10 +88,23 @@ public class MixcellaneousUtil {
 							.getAttributeValue(2));
 				}
 
-				else if ("defaulturl".equals(pullParser.getName())) {
-					this.tableInsertDefaultUrl = pullParser.nextText();
+				else if("scontroller".equals(pullParser.getName())) {
+					this.scontrollerName = pullParser.getAttributeValue(0);
+					this.scontrollerIp = pullParser.getAttributeValue(1);
+					this.scontrollerPort = Integer.parseInt(pullParser
+							.getAttributeValue(2));
 				}
-
+				
+				else if ("defaulturl".equals(pullParser.getName())) {
+					this.defaultUrl = pullParser.nextText();
+				}
+				
+				else if("hdmivgadefaulturl".equals(pullParser.getName())){
+					this.hdmiDefaultUrl = pullParser.nextText();
+				}
+				
+				
+				
 				break;
 
 			case XmlPullParser.END_TAG:

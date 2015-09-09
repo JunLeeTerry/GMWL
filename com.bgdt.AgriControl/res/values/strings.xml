@@ -23,6 +23,8 @@
     
     <string name="closePreview">关闭预览</string>
 	<string name="previewstring">预览窗口</string>
-	<string name="nonetworktip">请先连接网络！</string>
-	  
+	<string name="nonetworktip">请先连接无线网络！</string>
+	 
+	<string name="ping_scontroller">请检查与大屏控制器之间的连接！</string>
+	<string name="ping_ipc">请检查与工控机之间的连接！</string>
 </resources>

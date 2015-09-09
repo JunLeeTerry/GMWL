@@ -277,7 +277,7 @@ int drawable xc3 0x7f020073
 int drawable xc4 0x7f020074
 int drawable xc5 0x7f020075
 int drawable xc6 0x7f020076
-int id action_about 0x7f050050
+int id action_about 0x7f05004f
 int id action_bar 0x7f05001c
 int id action_bar_activity_content 0x7f050015
 int id action_bar_container 0x7f05001b
@@ -286,12 +286,12 @@ int id action_bar_root 0x7f05001a
 int id action_bar_subtitle 0x7f050023
 int id action_bar_title 0x7f050022
 int id action_context_bar 0x7f05001d
-int id action_exit 0x7f050051
+int id action_exit 0x7f050050
 int id action_menu_divider 0x7f050016
 int id action_menu_presenter 0x7f050017
 int id action_mode_close_button 0x7f050024
-int id action_settings 0x7f050052
-int id action_update 0x7f05004f
+int id action_settings 0x7f050051
+int id action_update 0x7f05004e
 int id activity_chooser_view_content 0x7f050025
 int id always 0x7f05000b
 int id baseInfoGv 0x7f050043
@@ -300,8 +300,8 @@ int id checkbox 0x7f05002d
 int id close 0x7f050040
 int id collapseActionView 0x7f05000d
 int id default_activity_button 0x7f050028
-int id detailImg 0x7f05004c
-int id detailName 0x7f05004d
+int id detailImg 0x7f05004b
+int id detailName 0x7f05004c
 int id dialog 0x7f05000e
 int id disableHome 0x7f050008
 int id dropdown 0x7f05000f
@@ -325,9 +325,8 @@ int id none 0x7f050010
 int id normal 0x7f050000
 int id onwall 0x7f05003f
 int id open 0x7f05003e
-int id preview_surfaceview 0x7f05004a
 int id preview_view 0x7f050044
-int id preview_webview 0x7f05004b
+int id preview_webview 0x7f05004a
 int id progress_circular 0x7f050018
 int id progress_horizontal 0x7f050019
 int id radio 0x7f05002f
@@ -347,7 +346,7 @@ int id shortcut 0x7f05002e
 int id showCustom 0x7f050007
 int id showHome 0x7f050004
 int id showTitle 0x7f050006
-int id splitName 0x7f05004e
+int id splitName 0x7f05004d
 int id splitSp 0x7f05003d
 int id split_action_bar 0x7f05001e
 int id submit_area 0x7f050039
@@ -426,6 +425,8 @@ int string onwallSuccess 0x7f0a0019
 int string onwall_text 0x7f0a0014
 int string openSuccess 0x7f0a0017
 int string open_text 0x7f0a0012
+int string ping_ipc 0x7f0a0023
+int string ping_scontroller 0x7f0a0022
 int string previewstring 0x7f0a0020
 int string sceneSp_prompt 0x7f0a001e
 int string showError 0x7f0a0016

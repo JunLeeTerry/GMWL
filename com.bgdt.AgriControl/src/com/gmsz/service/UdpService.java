@@ -9,8 +9,16 @@
  */
 package com.gmsz.service;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.StringWriter;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -21,9 +29,13 @@ import java.util.List;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlSerializer;
 
+import android.content.Context;
+import android.os.Environment;
 import android.util.Log;
 import android.util.Xml;
+import android.widget.Toast;
 
 import com.gmsz.domain.BaseDetailInfo;
 import com.gmsz.domain.BaseInfo;
@@ -49,13 +61,13 @@ import com.gmsz.utils.ResetPackageUtil;
 public class UdpService {
 
 	private static final String TAG = "DemoService";
+	private static final String SENCE_FILENAME = "scene.xml";
 
 	private String message;
 	private int port;
 	private IpcScrean ipcScrean;
 	private String host;
 
-	
 	/**
 	 * 获取场景数据
 	 * 
@@ -65,8 +77,32 @@ public class UdpService {
 	 */
 	public List<Scene> getScenes() throws Exception {
 		// 从文件中读取场景的信息
-		InputStream xml = this.getClass().getClassLoader()
-				.getResourceAsStream("scene.xml");
+
+		File file = new File(Environment.getExternalStorageDirectory(),
+				SENCE_FILENAME);
+		if (!file.exists()) {
+			InputStream in = (this.getClass()).getClassLoader()
+					.getResourceAsStream(SENCE_FILENAME);
+			BufferedReader br = new BufferedReader(new InputStreamReader(in,
+					"utf-8"));
+			StringBuffer stringBuffer = new StringBuffer();
+			String line = "";
+			while ((line = br.readLine()) != null) {
+				stringBuffer.append(line);
+			}
+
+			file.createNewFile();
+
+			OutputStream out = new FileOutputStream(file);
+
+			OutputStreamWriter outwriter = new OutputStreamWriter(out, "utf-8");
+			outwriter.write(stringBuffer.toString());
+
+			outwriter.close();
+		}
+		boolean fileex;
+		fileex = file.exists();
+		InputStream xml = new FileInputStream(file);
 		List<Scene> scenes = null;
 		Scene scene = null;
 		Frame frame = null;
@@ -84,9 +120,15 @@ public class UdpService {
 				if ("scene".equals(pullParser.getName())) {
 					int id = Integer.parseInt(pullParser.getAttributeValue(0));
 					String name = pullParser.getAttributeValue(1);
+					// get spilit from xml
+					// int spilit = Integer.parseInt(pullParser
+					// .getAttributeValue(2));
+					int spilit = Integer.parseInt(pullParser.getAttributeValue(
+							"", "spilit"));
 					scene = new Scene();
 					scene.setId(id);
 					scene.setName(name);
+					scene.setSpilit(spilit);
 				}
 				if ("frame".equals(pullParser.getName())) {
 					int id = Integer.parseInt(pullParser.getAttributeValue(0));
@@ -126,8 +168,65 @@ public class UdpService {
 			}
 			event = pullParser.next();
 		}
-		Log.i(TAG, scenes.get(0).getFrameList().get(0).toString());
+		// Log.i(TAG, scenes.get(0).getFrameList().get(0).toString());
 		return scenes;
+	}
+
+	public static boolean writeSence(Context context, List<Scene> scenes) {
+		XmlSerializer serializer = Xml.newSerializer();
+		StringWriter writer = new StringWriter();
+		try {
+			serializer.setOutput(writer);
+			serializer.startDocument("utf-8", true);
+			serializer.startTag("", "scenes");
+			for (Scene scene : scenes) {
+				serializer.startTag("", "scene");
+				serializer.attribute("", "id", scene.getId().toString());
+				serializer.attribute("", "name", scene.getName());
+				serializer.attribute("", "spilit", scene.getSpilit() + "");
+				for (Frame frame : scene.getFrameList()) {
+					serializer.startTag("", "frame");
+					serializer.attribute("", "id", frame.getId().toString());
+					serializer.startTag("", "type");
+					serializer.text(frame.getType());
+					serializer.endTag("", "type");
+					serializer.startTag("", "url");
+					serializer.text(frame.getUrl());
+					serializer.endTag("", "url");
+					serializer.startTag("", "data");
+					serializer.text(frame.getData());
+					serializer.endTag("", "data");
+					serializer.startTag("", "name");
+					serializer.text(frame.getName());
+					serializer.endTag("", "name");
+
+					serializer.endTag("", "frame");
+				}
+				serializer.endTag("", "scene");
+			}
+			serializer.endTag("", "scenes");
+
+			serializer.endDocument();
+
+			/*
+			 * OutputStream out = context.openFileOutput("usersences.xml",
+			 * context.MODE_PRIVATE);
+			 */
+
+			File file = new File(Environment.getExternalStorageDirectory(),
+					SENCE_FILENAME);
+			OutputStream out = new FileOutputStream(file);
+
+			OutputStreamWriter outwriter = new OutputStreamWriter(out, "utf-8");
+			outwriter.write(writer.toString());
+			outwriter.close();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		// Log.i("testxmlwrite",writer.getBuffer().toString());
+
 	}
 
 	// 获取工控机name对应的ip地址
@@ -359,11 +458,10 @@ public class UdpService {
 		}
 
 		/**
-		 * 发送矩阵重置的数据包
-		 * 通常使用对矩阵中数据的清除作用
+		 * 发送矩阵重置的数据包 通常使用对矩阵中数据的清除作用
 		 */
 		sendResetPackage();
-		
+
 		// 发送数据包给大屏控制器
 		sendUdp("CALLSCENE");
 		// Udp广播让工控机播放视频或网页
@@ -432,10 +530,10 @@ public class UdpService {
 					else {
 						// 模拟矩阵的ip和端口
 						host = MixcellaneousUtil.getInstance().getMatrixIp();
-						//host = "192.168.18.20";
-						//port = 12345;
+						// host = "192.168.18.20";
+						// port = 12345;
 						port = MixcellaneousUtil.getInstance().getMatrixPort();
-						
+
 						Integer output = null;
 						Integer input = null;
 						ipcScrean = ipcScreans.get(i);
@@ -445,14 +543,15 @@ public class UdpService {
 								output = matrix.getOutputport();
 							}
 						}
-						input = Integer.parseInt(frame.getData());
+						// input = Integer.parseInt(frame.getData());
+						input = Integer.parseInt(frame.getUrl());
 
 						// 调用HDMI-VGA生成数据包的方法，将数据包发送给矩阵
 						byte[][] bytes = MatrixPortUtil.getInstance()
 								.getMarixContentbytes(input, output);
 						for (byte[] bytearray : bytes) {
 							sendudpPackage(host, bytearray, port);
-							//发送给矩阵的udp数据包需要每隔一秒钟发送
+							// 发送给矩阵的udp数据包需要每隔一秒钟发送
 							try {
 								Thread.sleep(1000);
 							} catch (InterruptedException e) {
@@ -492,8 +591,8 @@ public class UdpService {
 	private void sendUdp(final String type) {
 		new Thread(new Runnable() {
 			public void run() {
-				String host = "255.255.255.255";// 广播地址
-				int port = 12345;// 广播的目的端口
+				// String host = "255.255.255.255";// 广播地址
+				// int port = 12345;// 广播的目的端口
 				// 组成广播发送的内容
 				/*
 				 * IpcPackage ipcPackage = new IpcPackage();
@@ -501,6 +600,10 @@ public class UdpService {
 				 * ipcPackage.setType(type); ipcPackage.setUrl("http");
 				 */
 				// String message = ipcPackage.toString();
+
+				String host = MixcellaneousUtil.getInstance()
+						.getScontrollerIp();
+				int port = MixcellaneousUtil.getInstance().getScontrollerPort();
 
 				ControllerPackage conPackage = new ControllerPackage(type, 1);
 				String message = conPackage.getUdpContent();
@@ -510,22 +613,22 @@ public class UdpService {
 		}).start();
 	}
 
-	//给矩阵发送重置的命令
-	private void sendResetPackage(){
+	// 给矩阵发送重置的命令
+	private void sendResetPackage() {
 		new Thread(new Runnable() {
 			public void run() {
-				//String host = "255.255.255.255";
-				//int port = 12345;
+				// String host = "255.255.255.255";
+				// int port = 12345;
 				String host = MixcellaneousUtil.getInstance().getMatrixIp();
 				int port = MixcellaneousUtil.getInstance().getMatrixPort();
-				
-				//发送给矩阵重置代码的数据包
-				ResetPackageUtil.getInstance().sendResetIpcPackage(host,port);
-				
-			}		
+
+				// 发送给矩阵重置代码的数据包
+				ResetPackageUtil.getInstance().sendResetIpcPackage(host, port);
+
+			}
 		}).start();
 	}
-	
+
 	// 发送数据包
 	private void sendudpPackage(String hostaddr, byte[] bytes, int port) {
 		InetAddress adds;

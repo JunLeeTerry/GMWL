@@ -14,6 +14,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.gmsz.adapter.BaseDetailInfoAdapter;
 import com.gmsz.adapter.FrameAdapter;
@@ -23,6 +24,7 @@ import com.gmsz.domain.BaseDetailInfo;
 import com.gmsz.domain.Frame;
 import com.gmsz.main.MainActivity;
 import com.gmsz.preview.PreViewAdapter;
+import com.gmsz.service.UdpService;
 import com.gmsz.utils.CalFrameUtil;
 /**
  * 
@@ -221,6 +223,11 @@ public class DragGridView extends GridView {
 			}
 		}
 		
+		//write sence to xml
+		boolean status = UdpService.writeSence(context, MainActivity.sceneList);
+		if (!status){
+			Toast.makeText(context, "≥°æ∞±£¥Ê ß∞‹£°", Toast.LENGTH_SHORT);
+		}
 	}
 	
 }

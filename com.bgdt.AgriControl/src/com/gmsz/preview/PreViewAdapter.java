@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebSettings.LayoutAlgorithm;
 import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.TextView;
@@ -38,7 +39,7 @@ public class PreViewAdapter extends BaseAdapter {
 	// controller
 	private TextView textView;
 	private WebView webView;
-	private SurfaceView surfaceView;
+	//private SurfaceView surfaceView;
 
 	// the height and width of the controller
 	private int height;
@@ -87,40 +88,47 @@ public class PreViewAdapter extends BaseAdapter {
 		String type = basedetailinfo.getType();
 		if (convertView == null)
 			convertView = layoutInflater.inflate(resource, null);
-		surfaceView = (SurfaceView) convertView
-				.findViewById(R.id.preview_surfaceview);
-		FrameLayout.LayoutParams videoViewParams = (FrameLayout.LayoutParams) surfaceView
-				.getLayoutParams();
+		/*surfaceView = (SurfaceView) convertView
+				.findViewById(R.id.preview_surfaceview);*/
+		//FrameLayout.LayoutParams videoViewParams = (FrameLayout.LayoutParams) surfaceView
+				//.getLayoutParams();
 		webView = (WebView) convertView.findViewById(R.id.preview_webview);
 
 		WebSettings settings = webView.getSettings();
 		settings.setUseWideViewPort(true);
 		settings.setLoadWithOverviewMode(true);
 		settings.setJavaScriptEnabled(true);
+		webView.setOverScrollMode(WebView.OVER_SCROLL_NEVER);
 		// settings.setBuiltInZoomControls(true);
 		// settings.setSupportZoom(true);
 
-		videoViewParams.height = 0;// 控件的 高度
-		videoViewParams.width = 0;// 控件的宽度
+		//videoViewParams.height = 0;// 控件的 高度
+		//videoViewParams.width = 0;// 控件的宽度
 
-		surfaceView.setLayoutParams(videoViewParams); // 使设置好的布局参数应用到控件</pre>
+		//surfaceView.setLayoutParams(videoViewParams); // 使设置好的布局参数应用到控件</pre>
 		
-		defaulturl = MixcellaneousUtil.getInstance()
-				.getTableInsertDefaultUrl();
+		//webview 进行自适应屏幕操作
+		webView.getSettings().setLayoutAlgorithm(LayoutAlgorithm.SINGLE_COLUMN);
+		
+		webView.setLayerType(webView.LAYER_TYPE_SOFTWARE, null);
+		webView.loadUrl(basedetailinfo.getData());
+		
+		
+		/*defaulturl = MixcellaneousUtil.getInstance()
+				.getDefaultUrl();
 		webView.loadUrl(defaulturl);
 		
 		// 如果是web类型的，加载<data>标签中的预览地址
 		if ("WEB".equals(type.toUpperCase())
 				|| "VIDEO".equals(type.toUpperCase())) {
 
-			webView.loadUrl(basedetailinfo.getData());
 
 		} else {
 			// 显示本地网页
 			// String str = "http://192.168.18.145/index.html?id=default";
 			webView.loadUrl(defaulturl);
 
-		}
+		}*/
 		return convertView;
 
 	}
