@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">bgis</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="shortname">BGDIS</string>
+    <string name="longname">贝格迪泰分布式交互系统</string>
+	<string name="englishname">Bigdata Distributive &amp; Interactive System</string>
+	<string name="cameraclose">拉近</string>
+	<string name="camerafar">拉远</string>
+	<string name="projectortip">向上滑动滑块打开投影幕；\n向下滑动滑块关闭投影幕</string>
+	<string name="lightsname">灯光控制</string>
+	<string name="micphonename">麦克风控制</string>
+	
+	<string name="openmeetingmode">开会模式</string>
+	<string name="stopmeetingmode">散会模式</string>
+	
+	<string name="openmodedetail">打开投影机\n打开投影幕\n关闭窗帘\n打开喇叭</string>
+	<string name="closemodedetail">关闭投影机\n关闭投影幕\n关闭电灯\n打开窗帘\n关闭喇叭\n关闭麦克风</string>
+</resources>	

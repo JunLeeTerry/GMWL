@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <com.bigdata.bgis.view.DragSwitchButton
+            android:id="@+id/projectorbutton"
+            android:layout_width="430px"
+            android:layout_height="200px" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/projectorname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/tipbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/linearLayout1"
+        android:layout_toRightOf="@+id/linearLayout1"
+        android:text="帮助" />
+
+    <TextView
+        android:id="@+id/projectortip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tipbutton"
+        android:layout_alignLeft="@+id/tipbutton"
+        android:text="@string/projectortip"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+    
+</RelativeLayout>

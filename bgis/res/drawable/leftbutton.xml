@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">   
+<item>   
+      <shape>   
+            <solid android:color="@color/material_grey_600" />   
+            <corners android:topRightRadius="6dp"
+               android:bottomRightRadius="6dp"/>
+      </shape>   
+</item>   
+<!-- 主体背景颜色值 -->  
+<item android:top="2px" android:right="2px" android:bottom="2px">   
+     <shape>   
+           <solid android:color="@color/background_material_dark" />  
+             
+           <padding android:bottom="1px"  
+                android:left="1px"  
+                android:right="1px"  
+                android:top="1px" />  
+                
+           <corners android:topRightRadius="6dp"
+               android:bottomRightRadius="6dp"/>
+     </shape>       
+</item>  
+</layer-list>  

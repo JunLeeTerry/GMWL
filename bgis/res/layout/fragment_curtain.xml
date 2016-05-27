@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+	<TextView
+	    android:id="@+id/curtainname"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:textStyle="bold"
+	    android:textColor="@android:color/white"
+	    ></TextView>
+    	
+	<LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <com.bigdata.bgis.view.DragSwitchButton
+            android:id="@+id/curtainbutton"
+            android:layout_width="430px"
+            android:layout_height="200px" />
+    </LinearLayout>
+</RelativeLayout>

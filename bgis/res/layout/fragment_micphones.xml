@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <GridView
+        android:id="@+id/micphoneview"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:numColumns="1"
+    	android:paddingTop="36dp"
+    	android:paddingBottom="36dp"
+        ></GridView>
+    
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textColor="@android:color/white"
+	    android:textStyle="bold"
+	    android:layout_gravity="top|left"
+	    android:text="@string/micphonename"
+	    ></TextView>
+
+</FrameLayout>
